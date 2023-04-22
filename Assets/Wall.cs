@@ -11,9 +11,13 @@ public class Wall : MonoBehaviour
     AudioClip impuctSE;
     AudioSource audioSource;
 
+    private Explodable explodable;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+
+        explodable = GetComponent<Explodable>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -23,7 +27,9 @@ public class Wall : MonoBehaviour
             audioSource.PlayOneShot(impuctSE);
 
             Clear();
+            
             Destroy(gameObject, 0.07f);
+            explodable.explode();
         }
     }
 
