@@ -10,9 +10,11 @@ public class Wall : MonoBehaviour
     [SerializeField] GameObject WallSeController;
     [SerializeField] GameObject StoneSeController;
 
+    private Explodable explodable;
+
     private void Start()
     {
-        
+        explodable = GetComponent<Explodable>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -23,7 +25,8 @@ public class Wall : MonoBehaviour
             StoneSeController.GetComponent<AudioSource>().Play();
 
             UI.GetComponent<UIManager>().SetClear();
-            Destroy(gameObject, 0.07f);
+
+            explodable.explode();
         }
     }
 
