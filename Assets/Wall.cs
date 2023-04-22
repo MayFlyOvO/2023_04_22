@@ -22,15 +22,13 @@ public class Wall : MonoBehaviour
         {
             audioSource.PlayOneShot(impuctSE);
 
-            Invoke("Clear", 3.0f);
-            transform.position = new(100.0f, 100.0f, 0);
-
-            
+            Clear();
+            Destroy(gameObject, 0.07f);
         }
     }
 
     private void Clear()
     {
-        UI.GetComponent<UIManager>().SetClearObject(true);
+        UI.GetComponent<UIManager>().SetClear();
     }
 }

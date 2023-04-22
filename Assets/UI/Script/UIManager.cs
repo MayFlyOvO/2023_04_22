@@ -26,17 +26,16 @@ public class UIManager : MonoBehaviour
 
     }
 
-    public void SetClearObject(bool clear)
+    private void ClearObject()
     {
-        clearObject.SetActive(clear);
-        GameClear = clear;
-        if(clear )
-        {
-            Time.timeScale = 0;
-        }
-        else
-        {
-            Time.timeScale = 1;
-        }
+        clearObject.SetActive(true);
+        GameClear = true;
+
+        Time.timeScale = 0;
+    }
+
+    public void SetClear()
+    {
+        Invoke("ClearObject", 3.0f);
     }
 }
