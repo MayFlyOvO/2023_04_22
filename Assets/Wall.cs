@@ -7,28 +7,22 @@ public class Wall : MonoBehaviour
 {
     [SerializeField] GameObject UI;
 
-    [SerializeField]
-    AudioClip impuctSE;
-    AudioSource audioSource;
+    [SerializeField] GameObject SeController;
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Stone")
         {
-            audioSource.PlayOneShot(impuctSE);
+            SeController.GetComponent<AudioSource>().Play();
 
-            Clear();
+            UI.GetComponent<UIManager>().SetClear();
             Destroy(gameObject, 0.07f);
         }
     }
 
-    private void Clear()
-    {
-        UI.GetComponent<UIManager>().SetClear();
-    }
 }
