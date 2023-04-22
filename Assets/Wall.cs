@@ -7,7 +7,8 @@ public class Wall : MonoBehaviour
 {
     [SerializeField] GameObject UI;
 
-    [SerializeField] GameObject SeController;
+    [SerializeField] GameObject WallSeController;
+    [SerializeField] GameObject StoneSeController;
 
     private void Start()
     {
@@ -18,7 +19,8 @@ public class Wall : MonoBehaviour
     {
         if (collision.gameObject.tag == "Stone")
         {
-            SeController.GetComponent<AudioSource>().Play();
+            WallSeController.GetComponent<AudioSource>().Play();
+            StoneSeController.GetComponent<AudioSource>().Play();
 
             UI.GetComponent<UIManager>().SetClear();
             Destroy(gameObject, 0.07f);
