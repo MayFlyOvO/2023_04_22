@@ -36,6 +36,6 @@ public class UIManager : MonoBehaviour
 
     public void SetClear()
     {
-        Invoke("ClearObject", 3.0f);
+        Invoke("ClearObject", 2.0f);
     }
 }

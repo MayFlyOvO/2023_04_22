@@ -8,6 +8,6 @@ public class Bottun : MonoBehaviour
     // ボタンが押された場合、ゲームシーンへ
     public void OnClick()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Stage1");
     }
 }
