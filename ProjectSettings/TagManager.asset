@@ -6,6 +6,14 @@ TagManager:
   tags:
   - Stone
   - Field
+  - ground
+  - Obstacle
+  - BombPickup
+  - Enemy
+  - ExplosionFX
+  - Bullet
+  - HealthBar
+  - Wall
   layers:
   - Default
   - TransparentFX

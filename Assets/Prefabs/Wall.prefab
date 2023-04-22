@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5082678764163519232}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 0}
-  impuctSE: {fileID: 8300000, guid: a5d790f414641a944a0167c3e4d94d17, type: 3}
+  WallSeController: {fileID: 0}
+  StoneSeController: {fileID: 0}
 --- !u!61 &7025175540776227871
 BoxCollider2D:
   m_ObjectHideFlags: 0

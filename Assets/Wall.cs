@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Wall : MonoBehaviour
 {
-    [SerializeField] GameObject UI;
-
     [SerializeField] GameObject WallSeController;
     [SerializeField] GameObject StoneSeController;
 
@@ -24,9 +22,8 @@ public class Wall : MonoBehaviour
             WallSeController.GetComponent<AudioSource>().Play();
             StoneSeController.GetComponent<AudioSource>().Play();
 
-            UI.GetComponent<UIManager>().SetClear();
-
             explodable.explode();
+            Destroy(collision.gameObject);
         }
     }
 
