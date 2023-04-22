@@ -17,10 +17,10 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         // ゲームクリアしたときに押したとき
-        if (Input.GetKeyUp(KeyCode.End) && GameClear)
+        if (Input.GetMouseButton(0) && GameClear)
         {
             // とりあえずリスタート
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("TitleScene");
             Time.timeScale = 1;
         }
 
