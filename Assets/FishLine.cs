@@ -8,6 +8,10 @@ public class FishLine : MonoBehaviour
     public float maxLength;
     public float minLength;
 
+    public GameObject wheel;
+
+    private float wheelRotateScale = 100f;
+
     private Obi.ObiRope rope;
     private Obi.ObiRopeCursor cursor;
 
@@ -26,7 +30,10 @@ public class FishLine : MonoBehaviour
         if (addLength != 0)
         {
             var length = Mathf.Clamp(addLength + GetCurrentLength(), minLength, maxLength);
-            cursor.ChangeLength(length);
+            SetLength(length);
+
+            var angle = Input.mouseScrollDelta.y * speed * wheelRotateScale * Time.deltaTime;
+            WheelRotate(angle);
             addLength = 0;
         }
     }
@@ -39,5 +46,13 @@ public class FishLine : MonoBehaviour
     void SetLength(float value)
     {
         cursor.ChangeLength(value);
+    }
+
+    void WheelRotate(float angle)
+    {
+        if (wheel != null)
+        {
+            wheel.transform.Rotate(Vector3.forward, angle);
+        }
     }
 }
