@@ -218,7 +218,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761457192}
-  m_Mesh: {fileID: 2009772051}
+  m_Mesh: {fileID: 1906575606}
 --- !u!23 &761457198
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -964,7 +964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thickness: 0
   material: {fileID: 0}
-  filter: -65535
+  filter: 1
   sourceCollider: {fileID: 1278906692}
 --- !u!61 &1278906692
 BoxCollider2D:
@@ -1136,7 +1136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1383511268}
---- !u!43 &2009772051
+--- !u!43 &1906575606
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
